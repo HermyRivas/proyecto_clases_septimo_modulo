@@ -1,9 +1,8 @@
 import reactLogo from './assets/react.svg';
 import viteLogo from './assets/vite.svg';
 import heroImg from './assets/hero.png';
-import { Contador } from './components/Contador';
-import { CampoTexto } from './components/CampoTexto';
-import { MensajeBienvenida } from './components/MensajeBienvenida';
+import { Encabezado } from './components/Encabezado';
+import { ListaAlumnos } from './components/ListaAlumnos';
 import './App.css';
  
 function App() {
@@ -12,9 +11,9 @@ function App() {
  
   return (
     <>
-    
-      <MensajeBienvenida />
-      
+      <Encabezado usuarioActivo={'Hermy Rivas'} />
+ 
+      <ListaAlumnos />
     </>
   );
 }
