@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from './assets/vite.svg';
 import heroImg from './assets/hero.png';
@@ -6,6 +7,7 @@ import { ListaAlumnos } from './components/ListaAlumnos';
 import './App.css';
  
 function App() {
+  const [idAlumnoSeleccionado, setIdAlumnoSeleccionado] = useState(null);
   const nombreEstudiante = 'Vic Flores';
   const horaActual = new Date().getHours();
  
@@ -13,11 +15,13 @@ function App() {
     <>
       <Encabezado usuarioActivo={'Hermy Rivas'} />
  
-      <ListaAlumnos />
+      <ListaAlumnos onSeleccionarAlumno={setIdAlumnoSeleccionado} />
     </>
   );
 }
  
 export default App;
+ 
+
  
  
