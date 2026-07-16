@@ -1,0 +1,13 @@
+import { FormularioCrear } from '../components/FormularioCrear';
+ 
+export const PaginaCrearAlumno = () => {
+  const navigate = useNavigate();
+ 
+  return (
+    <FormularioCrear
+      onGuardado={() => navigate('/')}
+      onCancelar={() => navigate('/')}
+    />
+  );
+};
+ 
