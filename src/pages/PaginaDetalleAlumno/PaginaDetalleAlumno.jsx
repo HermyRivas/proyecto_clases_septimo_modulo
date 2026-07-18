@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { DetalleAlumno } from '../components/DetalleAlumno';
+import { DetalleAlumno } from '../../components/DetalleAlumno/DetalleAlumno';
  
 export const PaginaDetalleAlumno = () => {
   const { id } = useParams();
@@ -7,5 +7,4 @@ export const PaginaDetalleAlumno = () => {
  
   return <DetalleAlumno idAlumno={id} onCerrar={() => navigate('/')} />;
 };
- 
  

@@ -9,3 +9,4 @@ export const api = axios.create({
     },
 });
 
+// interceptor: sucede antes de enviar la peticion
