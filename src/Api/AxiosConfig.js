@@ -10,3 +10,11 @@ export const api = axios.create({
 });
 
 // interceptor: sucede antes de enviar la peticion
+api.interceptors.request.use((config) =>{
+    const token = localStorage.getItem('token');
+
+    if (token) {
+        config.headers.Authorization = `bearer ${token}`;
+    }
+    return config;
+});
