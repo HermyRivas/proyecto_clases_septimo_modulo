@@ -7,17 +7,17 @@ import { PaginaLogin } from './pages/PaginaLogin/PaginaLogin';
 import { RutaProtegida } from './components/RutaProtegida/RutaProtegida';
 import { PaginaUsuarios } from './pages/PaginaUsuarios/PaginaUsuarios';
 import { PaginaAccesoDenegado } from './pages/PaginaAccesoDenegado/PaginaAccesoDenegado';
- 
+
 import './App.css';
- 
+
 function App() {
   return (
     <>
       <Routes>
         <Route path='/login' element={<PaginaLogin />} />
- 
+
         <Route path='/acceso-denegado' element={<PaginaAccesoDenegado />} />
- 
+
         <Route
           path='/'
           element={
@@ -26,7 +26,7 @@ function App() {
             </RutaProtegida>
           }
         />
- 
+
         <Route
           path='/alumnos/nuevo'
           element={
@@ -35,7 +35,7 @@ function App() {
             </RutaProtegida>
           }
         />
- 
+
         <Route
           path='/alumnos/:id'
           element={
@@ -44,7 +44,7 @@ function App() {
             </RutaProtegida>
           }
         />
- 
+
         <Route
           path='/alumnos/:id/editar'
           element={
@@ -53,7 +53,7 @@ function App() {
             </RutaProtegida>
           }
         />
- 
+
         <Route
           path='/usuarios'
           element={
@@ -66,6 +66,5 @@ function App() {
     </>
   );
 }
- 
+
 export default App;
- 
